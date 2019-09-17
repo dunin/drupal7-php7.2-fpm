@@ -24,7 +24,6 @@ RUN docker-php-ext-install \
     exif \
     dba \
     gd \
-    mcrypt \
     iconv \
     mbstring \
     pdo_mysql \
