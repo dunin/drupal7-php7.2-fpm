@@ -40,8 +40,7 @@ RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
     && php -r "unlink('composer-setup.php');" \
     && mv composer.phar /usr/local/bin/composer
 
-RUN php -r "readfile('http://files.drush.org/drush.phar');" > drush \
-    && chmod +x drush \
-    && mv drush /usr/local/bin
+RUN wget -O drush.phar https://github.com/drush-ops/drush-launcher/releases/download/0.6.0/drush.phar \
+    mv drush.phar /usr/local/bin/drush
 
 RUN drush dl registry_rebuild-7.x
