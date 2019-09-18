@@ -14,6 +14,7 @@ RUN apt-get install -y \
     unzip \
     libgeoip-dev \
     nano \
+    wget \
     mariadb-client
 
 RUN rm -rf /var/lib/apt/lists/*
